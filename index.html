@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sanskar & Shivansh — Official Channel</title>
+  <meta name="description" content="Welcome to Sanskar & Shivansh — drawing, animation stories, funk, and a sprinkle of magic." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --card: #121826;
+      --text: #e6eaf2;
+      --muted: #a9b3c7;
+      --accent: #6ee7b7;
+      --accent-2: #60a5fa;
+      --border: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 10% 10%, #0f172a 0%, var(--bg) 40%, #070b14 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header {
+      display: grid;
+      grid-template-columns: 96px 1fr auto;
+      gap: 20px;
+      align-items: center;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      backdrop-filter: blur(6px);
+    }
+    .avatar {
+      width: 96px; height: 96px; border-radius: 50%;
+      border: 2px solid var(--border);
+      background: #0d1320;
+      object-fit: cover;
+    }
+    .title h1 { margin: 0; font-size: 28px; font-weight: 800; letter-spacing: 0.2px; }
+    .title p { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+    .actions { display: flex; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 16px; border-radius: 10px; border: 1px solid var(--border);
+      background: #0f1627; color: var(--text); font-weight: 600;
+      transition: transform 0.08s ease, box-shadow 0.2s ease;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(0,0,0,0.35); }
+    .btn.primary { background: linear-gradient(90deg, var(--accent) 0%, #34d399 100%); color: #0a0f18; border: none; }
+    .btn.secondary { background: linear-gradient(90deg, var(--accent-2) 0%, #3b82f6 100%); color: #0a0f18; border: none; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .card {
+      grid-column: span 12;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--card);
+      overflow: hidden;
+    }
+    .card .content { padding: 20px; }
+    .card h2 { margin: 0 0 10px; font-size: 22px; }
+    .muted { color: var(--muted); }
+
+    .video-embed {
+      position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+      border-top: 1px solid var(--border);
+    }
+    .video-embed iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      border: 0;
+    }
+
+    .links {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px;
+    }
+    .link-tile {
+      display: flex; align-items: center; justify-content: center;
+      padding: 14px; border-radius: 12px; border: 1px solid var(--border);
+      background: #0f1627; font-weight: 600;
+    }
+    .link-tile:hover { background: #13203a; }
+
+    .thumbs {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px;
+    }
+    .thumb {
+      position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--border);
+      background: #0d1320;
+    }
+    .thumb img { width: 100%; height: 160px; object-fit: cover; display: block; }
+    .thumb .label {
+      position: absolute; bottom: 8px; left: 8px; right: 8px;
+      background: rgba(0,0,0,0.55); color: #fff; padding: 6px 8px; border-radius: 8px; font-size: 12px;
+      backdrop-filter: blur(2px);
+    }
+
+    footer {
+      margin: 32px 0 12px; color: var(--muted); font-size: 13px; text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      header { grid-template-columns: 72px 1fr; }
+      .actions { grid-column: 1 / -1; }
+      .avatar { width: 72px; height: 72px; }
+      .links { grid-template-columns: repeat(2, 1fr); }
+      .thumbs { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- Header -->
+    <header>
+      <img class="avatar" src="https://yt3.googleusercontent.com/naGlW3B_cCxM_bEwIW16aWwrP8fFKKehVQ2CzbdjPubgQydBYa4n9fhnmWHwNfDdHkG3Zl2VHA=s160-c-k-c0x00ffffff-no-rj" alt="Sanskar & Shivansh channel avatar" />
+      <div class="title">
+        <h1>Sanskar &amp; Shivansh</h1>
+        <p class="muted">@Sanskarkendre28 • Drawing, animation stories, funk, and a sprinkle of magic.</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://www.youtube.com/@Sanskarkendre28" target="_blank" rel="noopener">Visit YouTube</a>
+        <a class="btn secondary" href="https://www.youtube.com/@Sanskarkendre28?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a>
+      </div>
+    </header>
+
+    <!-- Featured video -->
+    <section class="card">
+      <div class="content">
+        <h2>Featured video</h2>
+        <p class="muted">“There Are TWO Types Of People Which One Are You?” — latest upload from the channel.</p>
+      </div>
+      <div class="video-embed">
+        <!-- Replace the video ID below to feature a different video -->
+        <iframe
+          src="https://www.youtube.com/embed/sIbFu-FUOLM"
+          title="Featured video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Quick links -->
+    <section class="card">
+      <div class="content">
+        <h2>Explore</h2>
+        <div class="links">
+          <a class="link-tile" href="https://www.youtube.com/@Sanskarkendre28/videos" target="_blank" rel="noopener">Videos</a>
+          <a class="link-tile" href="https://www.youtube.com/@Sanskarkendre28/shorts" target="_blank" rel="noopener">Shorts</a>
+          <a class="link-tile" href="https://www.youtube.com/@Sanskarkendre28/playlists" target="_blank" rel="noopener">Playlists</a>
+          <a class="link-tile" href="https://www.youtube.com/@Sanskarkendre28/community" target="_blank" rel="noopener">Community</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent thumbnails (static examples) -->
+    <section class="card">
+      <div class="content">
+        <h2>Recent highlights</h2>
+        <div class="thumbs">
+          <a class="thumb" href="https://www.youtube.com/watch?v=TAPugKd2Ktw" target="_blank" rel="noopener">
+            <img src="https://i.ytimg.com/vi/TAPugKd2Ktw/hqdefault.jpg" alt="No Era Amor slowed" />
+            <div class="label">No Era Amor slowed</div>
+          </a>
+          <a class="thumb" href="https://www.youtube.com/watch?v=7aXK-VCRdwY" target="_blank" rel="noopener">
+            <img src="https://i.ytimg.com/vi/7aXK-VCRdwY/hqdefault.jpg" alt="Lua Na Praca But its OOF" />
+            <div class="label">Lua Na Praca — OOF</div>
+          </a>
+          <a class="thumb" href="https://www.youtube.com/watch?v=wUYQRYJ32JA" target="_blank" rel="noopener">
+            <img src="https://i.ytimg.com/vi/wUYQRYJ32JA/hqdefault.jpg" alt="Break in story 2 Roblox" />
+            <div class="label">Break in story 2 — Roblox</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Sanskar &amp; Shivansh • Unofficial site linking to the YouTube channel.
+    </footer>
+  </div>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
